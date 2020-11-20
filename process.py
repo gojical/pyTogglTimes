@@ -5,7 +5,7 @@ from configparser import ConfigParser
 from times import toggl_input
 
 config = ConfigParser()
-config.read("CONFIG.INI")
+config.read("CONFIG.ini")
 
 
 def time_to_sec(time_yup):
