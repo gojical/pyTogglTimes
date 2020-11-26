@@ -1,11 +1,12 @@
 # https://github.com/toggl/toggl_api_docs/blob/master/toggl_api.md
 from requests import post
-from configparser import ConfigParser
+from tools import (
+    get_config
+)
 
 from times import toggl_input
 
-config = ConfigParser()
-config.read("CONFIG.ini")
+config = get_config()
 
 
 def time_to_sec(time_yup):
@@ -15,6 +16,7 @@ def time_to_sec(time_yup):
     seconds += time_yup[2]
     return seconds
 
+
 api_url = "https://api.track.toggl.com/api/v8/time_entries"
 
 for entry in toggl_input:
@@ -22,11 +24,11 @@ for entry in toggl_input:
         api_url,
         auth=(config["TOGGL_API"]["key"], "api_token"),
         json={
-            "time_entry": 
+            "time_entry":
             {
                 "description": entry['desc'],
                 "created_with": "pyTogglTimes",
-                "start": f"{entry['start']}T{entry['from']}:00+02:00",
+                "start": f"{entry['start']}T{entry['from']}:00{config['TOGGL_API']['timezone']}",
                 "duration": time_to_sec(entry['dur']),
                 "billable": entry["billable"],
                 "pid": entry["project"].value,

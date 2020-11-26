@@ -2,7 +2,7 @@ from setuptools import find_packages
 from setuptools import setup
 
 install_requires = [
-    "requests"
+    "requests", "pytest", "coverage"
 ]
 
 setup(
@@ -18,4 +18,4 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=install_requires,
-    extras_require={"test": ["pytest", "coverage"]})
+)

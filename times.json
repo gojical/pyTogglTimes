@@ -1,0 +1,10 @@
+[
+  {
+    "start": "2020-10-01",
+    "from": "08:00",
+    "to": "10:00",
+    "project": "ADMIN",
+    "billable": false,
+    "desc": "Admin, Catchup"
+  }
+]
