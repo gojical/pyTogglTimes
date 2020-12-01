@@ -15,8 +15,6 @@
 7. Once you are happy run `python ./main.py`
 8. Sit back, relax and enjoy the magic 🎆🎇
 
----
-
 ## Extra Info
 
 - Developed using this doc: [Toggl API](https://github.com/toggl/toggl_api_docs/blob/master/toggl_api.md)
