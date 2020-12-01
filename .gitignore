@@ -28,7 +28,7 @@ share/python-wheels/
 *.egg
 MANIFEST
 /CONFIG.ini
-/times.json
+times.json
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
