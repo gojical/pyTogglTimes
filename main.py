@@ -17,7 +17,7 @@ for entry in times:
             "time_entry":
             {
                 "description": entry['desc'],
-                "created_with": "pyTogglTimes",
+                "created_with": "https://github.com/howzitcal/pyTogglTimes",
                 "start": f"{entry['start']}T{entry['from']}:00{config['TOGGL_API']['timezone']}",
                 "duration": get_delta_datetime(f"{entry['start']} {entry['from']}", f"{entry['start']} {entry['to']}"),
                 "billable": entry["billable"],
