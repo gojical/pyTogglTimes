@@ -1,4 +1,4 @@
-# pyToggleTimes ⏲🐍
+# pyToggleTimes 🐍⌚📅
 
 ## Quick Start
 
